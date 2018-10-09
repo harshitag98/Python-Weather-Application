@@ -15,5 +15,6 @@ Here Are Some Glimpse of GUI
 
 ![guisample](https://user-images.githubusercontent.com/37044020/46648740-07c98800-cbb4-11e8-87b2-77ca0fc5f45f.PNG)
 
-Searching Location
+Searching Weather
 
+![guisample1](https://user-images.githubusercontent.com/37044020/46648796-4101f800-cbb4-11e8-8d83-af092705c988.PNG)
