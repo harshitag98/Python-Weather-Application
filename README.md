@@ -1,5 +1,5 @@
 ### Python-Weather-Application
-#Uses API service from OpenWeatherMap and ipinfo. Displays current weather of any city and current Location
+###Uses API service from OpenWeatherMap and ipinfo. Displays current weather of any city and current Location
 
 
 Here I used Python Library PyQt5 to Create the GUI. 
