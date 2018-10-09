@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1446</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{background-image:url(:/newPrefix/weath.jpg)}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>50</y>
+     <width>862</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Castellar</family>
+     <pointsize>30</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{color:rgb(255, 210, 221)}</string>
+   </property>
+   <property name="lineWidth">
+    <number>3</number>
+   </property>
+   <property name="text">
+    <string>Well What's The Weather Today!!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="weathers">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>260</y>
+     <width>251</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Find City Weather</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="locWeathers">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>260</y>
+     <width>351</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Find My Location's Weather</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="locPlot">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>260</y>
+     <width>381</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Plot My Location On the Map</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>160</y>
+     <width>486</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Franklin Gothic Demi Cond</family>
+     <pointsize>20</pointsize>
+     <weight>50</weight>
+     <italic>true</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{color:rgb(170, 255, 255)}</string>
+   </property>
+   <property name="text">
+    <string>Enter the City Whose Weather you Want to Know</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>160</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>City</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cityLabel">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>390</y>
+     <width>50</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{color:rgb(255, 0, 0)}</string>
+   </property>
+   <property name="text">
+    <string>City:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tempLabel">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>450</y>
+     <width>149</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{color:rgb(255, 0, 0)}</string>
+   </property>
+   <property name="text">
+    <string>Temperature:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weathLabel">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>540</y>
+     <width>227</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{color:rgb(255, 0, 0)}</string>
+   </property>
+   <property name="text">
+    <string>Weather Conditions:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="latLabel">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>390</y>
+     <width>96</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{color:rgb(255, 210, 221)}</string>
+   </property>
+   <property name="text">
+    <string>Latitude:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lonLabel">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>450</y>
+     <width>116</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{color:rgb(255, 210, 221)}</string>
+   </property>
+   <property name="text">
+    <string>Longitude:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="cityDisp">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>390</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="tempDisp">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>450</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="weathDisp">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>530</y>
+     <width>881</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Baskerville Old Face</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="latDisp">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>380</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="smallDecimalPoint">
+    <bool>true</bool>
+   </property>
+   <property name="value" stdset="0">
+    <double>20.363600000000002</double>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="longDisp">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>440</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="smallDecimalPoint">
+    <bool>true</bool>
+   </property>
+   <property name="value" stdset="0">
+    <double>20.363600000000002</double>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Android Files/tst.qrc"/>
+ </resources>
+ <connections/>
+</ui>
