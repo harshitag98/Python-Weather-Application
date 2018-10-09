@@ -11,5 +11,9 @@ IPInfo: https://ipinfo.io/
 
 Then I made use of the gmplot Library to plot the received co-ordinates and plot it on the map. Map is provided by google API although I haven't used Google API.
 
-Here Are Some Glimpse of Running GUI
+Here Are Some Glimpse of GUI
+
+![guisample](https://user-images.githubusercontent.com/37044020/46648740-07c98800-cbb4-11e8-87b2-77ca0fc5f45f.PNG)
+
+Searching Location
 
