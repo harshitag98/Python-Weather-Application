@@ -14,7 +14,7 @@ import json
 
 urlp1='https://api.openweathermap.org/data/2.5/weather?'
 urlCity='q='
-urlp2='&APPID=5b1625e2a9a935be9c3f96b63e556cc7'                         #Unique API key for openweathermap
+urlp2='&APPID='                         #Place your Obtained openweathermap API Key Here next to 'APPID='. It is like 5b1625e2a9a935be9c3f96b63e556cc7
 urlCordP1='lat={'
 urlCordP2='}&lon={'
 def reqData(city):
@@ -47,8 +47,8 @@ class Ui_Dialog(object):
     def func2(self):
         try:
             print("Loc Weather Selected")
-            locReq=requests.get('https://ipinfo.io/city/?token=8f5570cbc2cc02')
-            latLng=requests.get('https://ipinfo.io/loc/?token=8f5570cbc2cc02')
+            locReq=requests.get('https://ipinfo.io/city/?token=')     # Place Your Obtained IpInfo API key here next to 'token='. It is like 8f5570cbc2cc02
+            latLng=requests.get('https://ipinfo.io/loc/?token=')          # Place Your Obtained IpInfo API key here next to 'token='. It is like 8f5570cbc2cc02
             latLng=latLng.text.strip()
             [var1,var2]=latLng.split(',')
             global lat
@@ -77,7 +77,7 @@ class Ui_Dialog(object):
 
 
 
-    
+
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1446, 890)
@@ -216,7 +216,7 @@ class Ui_Dialog(object):
         self.locWeathers.clicked.connect(self.func2)
         self.locPlot.clicked.connect(self.func3)
 
-        
+
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
@@ -243,4 +243,3 @@ if __name__ == "__main__":
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
-
