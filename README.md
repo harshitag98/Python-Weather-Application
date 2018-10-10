@@ -7,10 +7,13 @@ Here I used Python Library PyQt5 to Create the GUI.
 I used OpenWeatherMap API to get the weather Info.
 
 OpenWeatherMap: https://openweathermap.org/
+You can also get your free API Key. Just go to the site, register for API services and get The API key. Then go to line 17 and add API Key next to '&APPID='.
+
 
 For Finding the Location of the device, We used IPInfo API to get location from our IP Address.
 
 IPInfo: https://ipinfo.io/
+Here Also you can get Free API key. Just go to this site and get your API key. put that in lines 50 and 51 next to 'token='.
 
 Then I made use of the gmplot Library to plot the received co-ordinates and plot it on the map. Map is provided by google API although I haven't used Google API.
 
