@@ -78,7 +78,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1446, 890)
-        Dialog.setStyleSheet("QDialog{background-image:url(weath.jpg)}")
+        Dialog.setStyleSheet("QDialog{background-image:url(Background_1.jpg)}")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(270, 50, 862, 48))
         font = QtGui.QFont()
