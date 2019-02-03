@@ -25,7 +25,6 @@ def reqData(city):
     return data
 
 class Ui_Dialog(object):
-
     def func(self):
         try:
             print("Weather Selected")
@@ -44,6 +43,7 @@ class Ui_Dialog(object):
             self.cityDisp.setText("There was some error!!!")
             self.tempDisp.setText("")
             self.weathDisp.setText("")
+
     def func2(self):
         try:
             print("Loc Weather Selected")
@@ -64,6 +64,7 @@ class Ui_Dialog(object):
             self.weathDisp.setText((getData['weather'][0])['main']+","+(getData['weather'][0])['description'])
         except Exception as e:
             print(e)
+
     def func3(self):
         try:
             print(lat,lng)
@@ -73,10 +74,6 @@ class Ui_Dialog(object):
             os.system('D:\\maps123.html')
         except:
             self.cityDisp.setText("First Locate yourself")
-
-
-
-
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -210,13 +207,10 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
-
-
+        
         self.weathers.clicked.connect(self.func)
         self.locWeathers.clicked.connect(self.func2)
         self.locPlot.clicked.connect(self.func3)
-
-
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
