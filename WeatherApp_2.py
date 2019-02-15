@@ -7,8 +7,75 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import requests
+import os
+import gmplot
+import json
+
+urlp1='https://api.openweathermap.org/data/2.5/weather?'
+urlCity='q='
+urlp2='&APPID='                         #Place your Obtained openweathermap API Key Here next to 'APPID='. It is like 5b1625e2a9a935be9c3f96b63e556cc7
+urlCordP1='lat={'
+urlCordP2='}&lon={'
+
+def reqData(city):
+    print("Requesting data",city)
+    url=urlp1+urlCity+city+urlp2
+    response=requests.get(url)
+    data=response.json()
+    return data
 
 class Ui_Dialog(object):
+	def func(self):
+        try:
+            print("Weather Selected")
+            city=self.lineEdit.text()
+            if(city=='City'):
+                self.textBrowser.setText("Please enter City Name")
+                self.textBrowser_2.setText("")
+                self.textBrowser_3.setText("")
+                return
+            getData=reqData(city)
+            self.textBrowser.setText(city)
+            self.textBrowser_2.setText(str(int(float((getData['main'])['temp'])-273.15)))
+            self.textBrowser_3.setText((getData['weather'][0])['main']+","+(getData['weather'][0])['description'])
+        except Exception as e:
+            print(e)
+            self.textBrowser.setText("There was some error!!!")
+            self.textBrowser_2.setText("")
+            self.textBrowser_3.setText("")
+
+    def func2(self):
+        try:
+            print("Loc Weather Selected")
+            locReq=requests.get('https://ipinfo.io/city/?token=')     # Place Your Obtained IpInfo API key here next to 'token='. It is like 8f5570cbc2cc02
+            latLng=requests.get('https://ipinfo.io/loc/?token=')          # Place Your Obtained IpInfo API key here next to 'token='. It is like 8f5570cbc2cc02
+            latLng=latLng.text.strip()
+            [var1,var2]=latLng.split(',')
+            global lat
+            lat=var1
+            global lng
+            lng=var2
+            self.lcdNumber.display(lat)
+            self.lcdNumber_2.display(lng)
+            cityData=locReq.text.strip()
+            getData=reqData(cityData)
+            self.textBrowser.setText(cityData)
+            self.textBrowser_2.setText(str(int(float((getData['main'])['temp'])-273.15)))
+            self.textBrowser_3.setText((getData['weather'][0])['main']+","+(getData['weather'][0])['description'])
+        except Exception as e:
+            print(e)
+			
+    def func3(self):
+        try:
+            print(lat,lng)
+            gmap1=gmplot.GoogleMapPlotter(float(lat),float(lng),16)
+            gmap1.marker(float(lat),float(lng))
+            gmap1.draw('D:\\maps123.html')
+            os.system('D:\\maps123.html')
+        except:
+            self.textBrowser.setText("First Locate yourself")
+			
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1373, 868)
@@ -218,6 +285,10 @@ class Ui_Dialog(object):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
+		
+		self.pushButton.clicked.connect(self.func)
+        self.pushButton_2.clicked.connect(self.func2)
+        self.pushButton_3.clicked.connect(self.func3)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
