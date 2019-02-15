@@ -18,9 +18,3 @@ Here also you can get Free API key. Just go to this site and get your API key. P
 Then we made use of the gmplot Library to plot the received co-ordinates and plot it on the map. Map is provided by google API although Google API has not been used.
 
 Some Glimpse of GUI have been given in the screenshots folder for the GUI's.
-
-![guisample](https://user-images.githubusercontent.com/37044020/46648740-07c98800-cbb4-11e8-87b2-77ca0fc5f45f.PNG)
-
-Searching Weather
-
-![guisample1](https://user-images.githubusercontent.com/37044020/46648796-4101f800-cbb4-11e8-8d83-af092705c988.PNG)
