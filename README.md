@@ -19,4 +19,12 @@ Then we made use of the gmplot Library to plot the received co-ordinates and plo
 
 Some Glimpse of GUI have been given in the screenshots folder for the GUI's.
 
-There are Two Sets of UI here. So to run 1st Set of GUI
+There are Two Sets of UI here. So to run 1st Set of GUI, run the WeatherApp_1.py file. The Screenshots for the same are in Screenshots_1 folder. Another Set of GUI  can be run with WeatherApp_2.py file. The Screenshots for the same are in Screenshots_2 folder.
+
+For running these, you would need to import following libraries:
+PyQt5
+requests
+gmplot
+json
+
+If these are not there, this application won't run
